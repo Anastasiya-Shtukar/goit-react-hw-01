@@ -1,0 +1,64 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  width: 600px;
+  border: 3px solid black;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+.userInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.userAvatar {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(47, 47, 55);
+  border-radius: 50%;
+}
+
+.userName {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.userTag {
+  font-size: 48px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.statsInformation {
+  display: flex;
+  width: 595px;
+
+  background-color: rgb(206, 203, 203);
+  font-size: 32px;
+  border-top: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+.liStats {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 199px;
+  justify-content: center;
+  align-items: center;
+}
+
+.liStatsViews {
+  border-right: 3px solid rgba(0, 0, 0, 0.5);
+  border-left: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+.statsSpan {
+  font-weight: 700;
+}
