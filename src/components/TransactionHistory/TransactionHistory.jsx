@@ -1,14 +1,14 @@
-const items = ({ type, amout, currency }) => {
+const items = ({ type, amount, currency }) => {
   return (
-    <tr>
+    <>
       <td>{type}</td>
-      <td>{amout}</td>
+      <td>{amount}</td>
       <td>{currency}</td>
-    </tr>
+    </>
   );
 };
 
-const ItemT = ({ Children }) => <tr>{Children}</tr>;
+const ItemT = ({ children }) => <tr>{children}</tr>;
 
 const TransactionHistory = ({ transactions }) => {
   return (
@@ -22,7 +22,15 @@ const TransactionHistory = ({ transactions }) => {
       </thead>
       <tbody>
         {transactions.map((transaction) => {
-          return <ItemT key={transaction.id}>{items}</ItemT>;
+          return (
+            <ItemT key={transaction.id}>
+              {items({
+                type: transaction.type,
+                amount: transaction.amount,
+                currency: transaction.currency,
+              })}
+            </ItemT>
+          );
         })}
       </tbody>
     </table>
