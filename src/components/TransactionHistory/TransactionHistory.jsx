@@ -1,9 +1,12 @@
+import css from "./Transaction.module.css";
+import clsx from "clsx";
+
 const items = ({ type, amount, currency }) => {
   return (
     <>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
+      <td className={clsx(css.tbodyItem)}>{type}</td>
+      <td className={clsx(css.tbodyItem)}>{amount}</td>
+      <td className={clsx(css.tbodyItem)}>{currency}</td>
     </>
   );
 };
@@ -12,12 +15,12 @@ const ItemT = ({ children }) => <tr>{children}</tr>;
 
 const TransactionHistory = ({ transactions }) => {
   return (
-    <table>
-      <thead>
+    <table className={clsx(css.table)}>
+      <thead className={clsx(css.thead)}>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <th className={clsx(css.theadItem)}>Type</th>
+          <th className={clsx(css.theadItem)}>Amount</th>
+          <th className={clsx(css.theadItem)}>Currency</th>
         </tr>
       </thead>
       <tbody>
