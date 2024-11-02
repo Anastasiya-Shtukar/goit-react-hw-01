@@ -1,11 +1,13 @@
+import { Children } from "react";
 import FriendListItem from "./FriendListItem";
 
-const FriendList = () => {
-  let friends = [];
+const Item = ({ Children }) => <li>{Children}</li>;
+
+const FriendList = ({ friends }) => {
   return (
     <ul>
       {friends.map((friend) => {
-        return <li key={friend.id}>{FriendListItem}</li>;
+        return <Item key={friend.id}>{FriendListItem}</Item>;
       })}
     </ul>
   );
